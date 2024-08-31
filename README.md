@@ -16,7 +16,7 @@ You may also see any lint errors in the console.
 
 ###
 
- <p align="1eft">Netlify Demo : https://endearing-strudel-73ba73.netlify.app</p> 
+ <p align="1eft">Netlify Demo : https://github.com/Deepanagarjan/useContext</p> 
 
 
 ## Setup
