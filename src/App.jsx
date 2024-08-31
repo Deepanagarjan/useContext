@@ -1,4 +1,5 @@
 import  { useState, createContext } from 'react';
+import { FaShoppingCart } from 'react-icons/fa';  // Import the cart icon
 import Cartcard from './Components/Cartcard';
 
 export const UserContext = createContext();
@@ -48,12 +49,38 @@ function App() {
       image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
     },
   ]);
+//   return (
+//     <UserContext.Provider value={{ product, setProduct }}>
+//       <Cartcard />
+//     </UserContext.Provider>
+//   );
+// }
+
+
+const totalItems = product.length;  // Or you can calculate based on quantities if needed
+
   return (
     <UserContext.Provider value={{ product, setProduct }}>
+      {/* Navbar with Cart Icon */}
+      <nav className="navbar navbar-light" style={{ backgroundColor: '#FF8343' }}>
+        <div className="container-fluid">
+          <h1 className="navbar-brand" href="#"  style={{ marginLeft:"550px" , fontSize:"50px"}}>
+          DEEPA SHOP 
+          </h1>
+          <div className="d-flex align-items-center">
+            <FaShoppingCart size={34} />
+            <span className="badge bg-primary ms-2">{totalItems}</span>
+          </div>
+        </div>
+      </nav>
       <Cartcard />
     </UserContext.Provider>
   );
 }
+
+
+
+
 
 export default App;
     // {
